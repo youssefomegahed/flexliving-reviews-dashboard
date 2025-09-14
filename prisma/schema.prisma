@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Review {
+  /// Unique ID combining source and sourceReviewId (e.g. `hostaway:7453`)
+  id             String   @id
+  source         String   // "hostaway" | "google"
+  sourceReviewId String   // Original review ID from the source
+  listingId      String
+  listingName    String?
+  channel        String?  // airbnb | booking | etc.
+  reviewType     String?  // guest-to-host | host-to-guest
+  status         String   // published | pending | hidden
+  rating         Float?   // 1–5 scale
+  text           String
+  authorName     String?
+  createdAt      DateTime
+  approved       Boolean  @default(false)
+  categories     ReviewCategory[]
+  
+  @@index([listingId])
+  @@index([approved])
+  @@index([source, sourceReviewId])
+}
+
+model ReviewCategory {
+  id        String  @id @default(cuid())
+  reviewId  String
+  category  String
+  rating    Float
+  review    Review  @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+}
