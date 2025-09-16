@@ -39,6 +39,7 @@ export default function DashboardPage() {
   const {
     data: reviewsResponse,
     isLoading,
+    isFetching,
     error,
   } = useReviews(queryParams.filters, queryParams.pagination, queryParams.sort);
   const reviews = reviewsResponse?.data || [];
@@ -141,6 +142,7 @@ export default function DashboardPage() {
           totalItems={reviewsResponse?.total || 0}
           pageSize={pagination.pageSize || 10}
           sort={sort}
+          isFetching={isFetching}
           onPageChange={handlePageChange}
           onPageSizeChange={handlePageSizeChange}
           onSortChange={handleSortChange}
