@@ -57,7 +57,11 @@ export async function GET(req: Request) {
     if (endDate) where.createdAt.lte = new Date(endDate);
   }
 
-  type OrderBy = { rating?: 'asc' | 'desc'; createdAt?: 'asc' | 'desc'; listingName?: 'asc' | 'desc' };
+  type OrderBy = {
+    rating?: 'asc' | 'desc';
+    createdAt?: 'asc' | 'desc';
+    listingName?: 'asc' | 'desc';
+  };
 
   const orderBy: OrderBy = {};
   if (sortBy === 'rating') {
