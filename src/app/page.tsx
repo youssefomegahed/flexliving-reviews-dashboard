@@ -120,9 +120,7 @@ export default function DashboardPage() {
 
         <FiltersPanel
           filters={filters}
-          sort={sort}
           onFiltersChange={handleFiltersChange}
-          onSortChange={handleSortChange}
           onReset={handleReset}
         />
 
@@ -142,8 +140,10 @@ export default function DashboardPage() {
           totalPages={reviewsResponse?.totalPages || 1}
           totalItems={reviewsResponse?.total || 0}
           pageSize={pagination.pageSize || 10}
+          sort={sort}
           onPageChange={handlePageChange}
           onPageSizeChange={handlePageSizeChange}
+          onSortChange={handleSortChange}
         />
       </main>
     </div>

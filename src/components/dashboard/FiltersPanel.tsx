@@ -1,21 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import type { ReviewFilters, SortOptions } from '@/hooks/useReviews';
+import type { ReviewFilters } from '@/hooks/useReviews';
 
 interface FiltersPanelProps {
   filters: ReviewFilters;
-  sort: SortOptions;
   onFiltersChange: (filters: ReviewFilters) => void;
-  onSortChange: (sort: SortOptions) => void;
   onReset: () => void;
 }
 
 export default function FiltersPanel({
   filters,
-  sort,
   onFiltersChange,
-  onSortChange,
   onReset,
 }: FiltersPanelProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,19 +23,12 @@ export default function FiltersPanel({
     onFiltersChange({ ...filters, [key]: value });
   };
 
-  const updateSort = (
-    key: keyof SortOptions,
-    value: SortOptions[keyof SortOptions],
-  ) => {
-    onSortChange({ ...sort, [key]: value });
-  };
-
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 mb-6">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-flexPrimary">
-            Filters & Sorting
+            Filters
           </h3>
           <div className="flex items-center gap-2">
             <button
@@ -202,35 +191,6 @@ export default function FiltersPanel({
             </div>
           </div>
         )}
-
-        {/* Sorting */}
-        <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
-          <label className="text-sm font-medium text-gray-700">Sort by:</label>
-          <select
-            value={sort.sortBy || 'createdAt'}
-            onChange={(e) =>
-              updateSort(
-                'sortBy',
-                e.target.value as 'createdAt' | 'rating' | 'listingName',
-              )
-            }
-            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent"
-          >
-            <option value="createdAt">Date</option>
-            <option value="rating">Rating</option>
-            <option value="listingName">Property Name</option>
-          </select>
-          <select
-            value={sort.sortOrder || 'desc'}
-            onChange={(e) =>
-              updateSort('sortOrder', e.target.value as 'asc' | 'desc')
-            }
-            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent"
-          >
-            <option value="desc">Descending</option>
-            <option value="asc">Ascending</option>
-          </select>
-        </div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import type { Review } from '@/types/review';
+import type { SortOptions } from '@/hooks/useReviews';
 import { useApproveReview } from '@/hooks/useReviews';
 import React from 'react';
 import Pagination from './Pagination';
@@ -11,8 +12,10 @@ interface ReviewsTableProps {
   totalPages: number;
   totalItems: number;
   pageSize: number;
+  sort: SortOptions;
   onPageChange: (page: number) => void;
   onPageSizeChange: (pageSize: number) => void;
+  onSortChange: (sort: SortOptions) => void;
 }
 
 export default function ReviewsTable({
@@ -21,8 +24,10 @@ export default function ReviewsTable({
   totalPages,
   totalItems,
   pageSize,
+  sort,
   onPageChange,
   onPageSizeChange,
+  onSortChange,
 }: ReviewsTableProps) {
   const approveMutation = useApproveReview();
 
@@ -47,8 +52,45 @@ export default function ReviewsTable({
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold text-flexPrimary">Reviews</h2>
-          <div className="text-sm text-gray-600">
-            {totalItems} total reviews
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <label className="text-sm font-medium text-gray-700">
+                Sort by:
+              </label>
+              <select
+                value={sort.sortBy || 'createdAt'}
+                onChange={(e) =>
+                  onSortChange({
+                    ...sort,
+                    sortBy: e.target.value as
+                      | 'createdAt'
+                      | 'rating'
+                      | 'listingName',
+                  })
+                }
+                className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm"
+              >
+                <option value="createdAt">Date</option>
+                <option value="rating">Rating</option>
+                <option value="listingName">Property Name</option>
+              </select>
+              <select
+                value={sort.sortOrder || 'desc'}
+                onChange={(e) =>
+                  onSortChange({
+                    ...sort,
+                    sortOrder: e.target.value as 'asc' | 'desc',
+                  })
+                }
+                className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm"
+              >
+                <option value="desc">Descending</option>
+                <option value="asc">Ascending</option>
+              </select>
+            </div>
+            <div className="text-sm text-gray-600">
+              {totalItems} total reviews
+            </div>
           </div>
         </div>
 
