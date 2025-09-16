@@ -3,7 +3,7 @@
     "id": 7453,
     "type": "host-to-guest",
     "status": "published",
-    "rating": null,
+    "rating": 10,
     "publicReview": "Shane and family are wonderful! Would definitely host again :)",
     "reviewCategory": [
       {
@@ -22,5 +22,1421 @@
     "submittedAt": "2020-08-21 22:45:14",
     "guestName": "Shane Finkelstein",
     "listingName": "2B N1 A - 29 Shoreditch Heights"
+  },
+  {
+    "id": 7454,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Great guest, left the place tidy and was very communicative.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-08-22 10:12:34",
+    "guestName": "Alex Johnson",
+    "listingName": "1A N1 B - 10 Camden Road"
+  },
+  {
+    "id": 7455,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Pleasant stay, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-08-23 15:20:11",
+    "guestName": "Maria Lopez",
+    "listingName": "3C N2 C - 15 Baker Street"
+  },
+  {
+    "id": 7456,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Wonderful guest, very respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-08-24 09:45:00",
+    "guestName": "John Smith",
+    "listingName": "4D N3 D - 22 Oxford Avenue"
+  },
+  {
+    "id": 7457,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Good guest, but left some dishes unwashed.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-08-25 18:30:22",
+    "guestName": "Emily Davis",
+    "listingName": "5E N4 E - 8 King Street"
+  },
+  {
+    "id": 7458,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again anytime.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-08-26 13:15:47",
+    "guestName": "Michael Brown",
+    "listingName": "6F N5 F - 12 Queen's Road"
+  },
+  {
+    "id": 7459,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Nice guest, a bit late for check-out.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 7
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-08-27 11:05:33",
+    "guestName": "Sophie Turner",
+    "listingName": "7G N6 G - 5 Regent Street"
+  },
+  {
+    "id": 7460,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very friendly and left the apartment spotless.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-08-28 16:40:10",
+    "guestName": "Liam Wilson",
+    "listingName": "8H N7 H - 18 Park Lane"
+  },
+  {
+    "id": 7461,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Excellent guest, highly recommended.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-08-29 12:00:00",
+    "guestName": "Olivia Martinez",
+    "listingName": "9I N8 I - 30 Victoria Road"
+  },
+  {
+    "id": 7462,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Good guest, but a bit noisy at night.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 6
+      }
+    ],
+    "submittedAt": "2020-08-30 14:22:18",
+    "guestName": "Noah Lee",
+    "listingName": "10J N9 J - 44 Baker Street"
+  },
+  {
+    "id": 7463,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Pleasant and easy to communicate with.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-08-31 17:55:44",
+    "guestName": "Ava Patel",
+    "listingName": "11K N10 K - 21 Fleet Street"
+  },
+  {
+    "id": 7464,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Left the place in great condition.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-01 08:10:12",
+    "guestName": "William Chen",
+    "listingName": "12L N11 L - 3 Abbey Road"
+  },
+  {
+    "id": 7465,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 6,
+    "publicReview": "Decent guest, but could improve on cleanliness.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 5
+      },
+      {
+        "category": "communication",
+        "rating": 7
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 6
+      }
+    ],
+    "submittedAt": "2020-09-02 19:30:00",
+    "guestName": "Isabella Rossi",
+    "listingName": "13M N12 M - 7 Downing Street"
+  },
+  {
+    "id": 7466,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would love to host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-03 21:45:30",
+    "guestName": "James Kim",
+    "listingName": "14N N13 N - 2 Piccadilly Circus"
+  },
+  {
+    "id": 7467,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no issues.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-04 11:11:11",
+    "guestName": "Charlotte Nguyen",
+    "listingName": "15O N14 O - 6 Leicester Square"
+  },
+  {
+    "id": 7468,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-05 13:13:13",
+    "guestName": "Benjamin Clark",
+    "listingName": "16P N15 P - 19 Soho Square"
+  },
+  {
+    "id": 7469,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but forgot to return the keys.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 7
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 6
+      }
+    ],
+    "submittedAt": "2020-09-06 15:15:15",
+    "guestName": "Mia Walker",
+    "listingName": "17Q N16 Q - 23 Covent Garden"
+  },
+  {
+    "id": 7470,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Outstanding guest, highly recommended.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-07 17:17:17",
+    "guestName": "Elijah Scott",
+    "listingName": "18R N17 R - 11 Trafalgar Square"
+  },
+  {
+    "id": 7471,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Pleasant guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-08 19:19:19",
+    "guestName": "Amelia Lewis",
+    "listingName": "19S N18 S - 14 Borough Market"
+  },
+  {
+    "id": 7472,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and communicative.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-09 21:21:21",
+    "guestName": "Logan Young",
+    "listingName": "20T N19 T - 27 London Bridge"
+  },
+  {
+    "id": 7473,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 6,
+    "publicReview": "Okay guest, but left some trash behind.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 5
+      },
+      {
+        "category": "communication",
+        "rating": 7
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 6
+      }
+    ],
+    "submittedAt": "2020-09-10 23:23:23",
+    "guestName": "Harper King",
+    "listingName": "21U N20 U - 33 Tower Hill"
+  },
+  {
+    "id": 7474,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-11 08:08:08",
+    "guestName": "Evelyn Wright",
+    "listingName": "22V N21 V - 40 Liverpool Street"
+  },
+  {
+    "id": 7475,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no complaints.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-12 10:10:10",
+    "guestName": "Jack Hall",
+    "listingName": "23W N22 W - 55 Chancery Lane"
+  },
+  {
+    "id": 7476,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and tidy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-13 12:12:12",
+    "guestName": "Grace Allen",
+    "listingName": "24X N23 X - 60 Farringdon Road"
+  },
+  {
+    "id": 7477,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but a bit messy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-09-14 14:14:14",
+    "guestName": "Henry Baker",
+    "listingName": "25Y N24 Y - 70 Holborn Viaduct"
+  },
+  {
+    "id": 7478,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-15 16:16:16",
+    "guestName": "Sofia Carter",
+    "listingName": "26Z N25 Z - 80 Aldgate High Street"
+  },
+  {
+    "id": 7479,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-16 18:18:18",
+    "guestName": "Lucas Evans",
+    "listingName": "27AA N26 AA - 90 Bishopsgate"
+  },
+  {
+    "id": 7480,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-17 20:20:20",
+    "guestName": "Ella Foster",
+    "listingName": "28AB N27 AB - 100 Moorgate"
+  },
+  {
+    "id": 7481,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Decent guest, but could improve on communication.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 6
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-09-18 22:22:22",
+    "guestName": "Mason Green",
+    "listingName": "29AC N28 AC - 110 Bank Street"
+  },
+  {
+    "id": 7482,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-19 08:08:08",
+    "guestName": "Chloe Harris",
+    "listingName": "30AD N29 AD - 120 Cannon Street"
+  },
+  {
+    "id": 7483,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no issues.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-20 10:10:10",
+    "guestName": "Logan Wood",
+    "listingName": "31AE N30 AE - 130 Cheapside"
+  },
+  {
+    "id": 7484,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and tidy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-21 12:12:12",
+    "guestName": "Zoe Adams",
+    "listingName": "32AF N31 AF - 140 St Paul's Churchyard"
+  },
+  {
+    "id": 7485,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but a bit messy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-09-22 14:14:14",
+    "guestName": "Carter Bell",
+    "listingName": "33AG N32 AG - 150 Ludgate Hill"
+  },
+  {
+    "id": 7486,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-23 16:16:16",
+    "guestName": "Layla Cooper",
+    "listingName": "34AH N33 AH - 160 Fleet Street"
+  },
+  {
+    "id": 7487,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-24 18:18:18",
+    "guestName": "Julian Diaz",
+    "listingName": "35AI N34 AI - 170 Chancery Lane"
+  },
+  {
+    "id": 7488,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-25 20:20:20",
+    "guestName": "Aurora Edwards",
+    "listingName": "36AJ N35 AJ - 180 Holborn"
+  },
+  {
+    "id": 7489,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Decent guest, but could improve on communication.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 6
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-09-26 22:22:22",
+    "guestName": "Gabriel Fisher",
+    "listingName": "37AK N36 AK - 190 Gray's Inn Road"
+  },
+  {
+    "id": 7490,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-09-27 08:08:08",
+    "guestName": "Penelope Garcia",
+    "listingName": "38AL N37 AL - 200 Euston Road"
+  },
+  {
+    "id": 7491,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no issues.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-09-28 10:10:10",
+    "guestName": "Sebastian Grant",
+    "listingName": "39AM N38 AM - 210 Tottenham Court Road"
+  },
+  {
+    "id": 7492,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and tidy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-09-29 12:12:12",
+    "guestName": "Stella Hayes",
+    "listingName": "40AN N39 AN - 220 Oxford Street"
+  },
+  {
+    "id": 7493,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but a bit messy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-09-30 14:14:14",
+    "guestName": "David Ingram",
+    "listingName": "41AO N40 AO - 230 Marylebone Road"
+  },
+  {
+    "id": 7494,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-10-01 16:16:16",
+    "guestName": "Madison Jenkins",
+    "listingName": "42AP N41 AP - 240 Edgware Road"
+  },
+  {
+    "id": 7495,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-10-02 18:18:18",
+    "guestName": "Matthew Kelly",
+    "listingName": "43AQ N42 AQ - 250 Paddington Street"
+  },
+  {
+    "id": 7496,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-10-03 20:20:20",
+    "guestName": "Scarlett Lee",
+    "listingName": "44AR N43 AR - 260 Bayswater Road"
+  },
+  {
+    "id": 7497,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Decent guest, but could improve on communication.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 6
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-10-04 22:22:22",
+    "guestName": "Wyatt Long",
+    "listingName": "45AS N44 AS - 270 Notting Hill Gate"
+  },
+  {
+    "id": 7498,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-10-05 08:08:08",
+    "guestName": "Victoria Morgan",
+    "listingName": "46AT N45 AT - 280 Holland Park Avenue"
+  },
+  {
+    "id": 7499,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no issues.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-10-06 10:10:10",
+    "guestName": "Leo Nelson",
+    "listingName": "47AU N46 AU - 290 Shepherd's Bush Road"
+  },
+  {
+    "id": 7500,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and tidy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-10-07 12:12:12",
+    "guestName": "Hazel Ortiz",
+    "listingName": "48AV N47 AV - 300 Hammersmith Road"
+  },
+  {
+    "id": 7501,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but a bit messy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-10-08 14:14:14",
+    "guestName": "Nathan Perry",
+    "listingName": "49AW N48 AW - 310 Fulham Palace Road"
+  },
+  {
+    "id": 7502,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-10-09 16:16:16",
+    "guestName": "Savannah Reed",
+    "listingName": "50AX N49 AX - 320 Putney Bridge Road"
+  },
+  {
+    "id": 7503,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-10-10 18:18:18",
+    "guestName": "Lincoln Rivera",
+    "listingName": "51AY N50 AY - 330 Wandsworth Road"
+  },
+  {
+    "id": 7504,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-10-11 20:20:20",
+    "guestName": "Paisley Simmons",
+    "listingName": "52AZ N51 AZ - 340 Clapham Road"
+  },
+  {
+    "id": 7505,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Decent guest, but could improve on communication.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 7
+      },
+      {
+        "category": "communication",
+        "rating": 6
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-10-12 22:22:22",
+    "guestName": "Easton Stewart",
+    "listingName": "53BA N52 BA - 350 Brixton Road"
+  },
+  {
+    "id": 7506,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Perfect guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-10-13 08:08:08",
+    "guestName": "Aurora Thomas",
+    "listingName": "54BB N53 BB - 360 Camberwell Road"
+  },
+  {
+    "id": 7507,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, no issues.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-10-14 10:10:10",
+    "guestName": "Eli Turner",
+    "listingName": "55BC N54 BC - 370 Peckham Road"
+  },
+  {
+    "id": 7508,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very polite and tidy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 9
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-10-15 12:12:12",
+    "guestName": "Ruby Watson",
+    "listingName": "56BD N55 BD - 380 Old Kent Road"
+  },
+  {
+    "id": 7509,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 7,
+    "publicReview": "Nice guest, but a bit messy.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 7
+      }
+    ],
+    "submittedAt": "2020-10-16 14:14:14",
+    "guestName": "Miles West",
+    "listingName": "57BE N56 BE - 390 Tower Bridge Road"
+  },
+  {
+    "id": 7510,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Fantastic guest, would host again.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-10-17 16:16:16",
+    "guestName": "Willow Young",
+    "listingName": "58BF N57 BF - 400 Tooley Street"
+  },
+  {
+    "id": 7511,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Good guest, would recommend.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 8
+      },
+      {
+        "category": "communication",
+        "rating": 8
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 8
+      }
+    ],
+    "submittedAt": "2020-10-18 18:18:18",
+    "guestName": "Hudson Brooks",
+    "listingName": "59BG N58 BG - 410 Bermondsey Street"
+  },
+  {
+    "id": 7512,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 9,
+    "publicReview": "Very clean and respectful.",
+    "reviewCategory": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 9
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2020-10-19 20:20:20",
+    "guestName": "Brooklyn Butler",
+    "listingName": "60BH N59 BH - 420 Southwark Street"
   }
 ]
