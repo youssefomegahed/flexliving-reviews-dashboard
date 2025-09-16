@@ -109,7 +109,7 @@ export default function ReviewsTable({
                 href="/reviews-display"
                 className="px-3 py-1 bg-flexPrimary text-white rounded-lg hover:bg-flexPrimary/90 transition-colors text-sm font-medium"
               >
-                Visit Reviews Display
+                Visit Published Reviews Page
               </Link>
             )}
           </div>
