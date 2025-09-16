@@ -27,9 +27,7 @@ export default function FiltersPanel({
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 mb-6">
       <div className="p-4">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-flexPrimary">
-            Filters
-          </h3>
+          <h3 className="text-lg font-semibold text-flexPrimary">Filters</h3>
           <div className="flex items-center gap-2">
             <button
               onClick={onReset}
