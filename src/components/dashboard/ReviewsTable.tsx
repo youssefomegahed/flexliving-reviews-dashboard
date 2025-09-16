@@ -4,6 +4,7 @@ import type { Review } from '@/types/review';
 import type { SortOptions } from '@/hooks/useReviews';
 import { useApproveReview } from '@/hooks/useReviews';
 import React from 'react';
+import Link from 'next/link';
 import Pagination from './Pagination';
 
 interface ReviewsTableProps {
@@ -14,6 +15,7 @@ interface ReviewsTableProps {
   pageSize: number;
   sort: SortOptions;
   isFetching?: boolean;
+  showViewAllButton?: boolean;
   onPageChange: (page: number) => void;
   onPageSizeChange: (pageSize: number) => void;
   onSortChange: (sort: SortOptions) => void;
@@ -27,6 +29,7 @@ export default function ReviewsTable({
   pageSize,
   sort,
   isFetching = false,
+  showViewAllButton = false,
   onPageChange,
   onPageSizeChange,
   onSortChange,
@@ -60,43 +63,55 @@ export default function ReviewsTable({
             </div>
           </div>
 
-          {/* Sorting controls - responsive */}
-          <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
-            <label className="text-sm font-medium text-gray-700">
-              Sort by:
-            </label>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <select
-                value={sort.sortBy || 'createdAt'}
-                onChange={(e) =>
-                  onSortChange({
-                    ...sort,
-                    sortBy: e.target.value as
-                      | 'createdAt'
-                      | 'rating'
-                      | 'listingName',
-                  })
-                }
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[140px]"
-              >
-                <option value="createdAt">Date</option>
-                <option value="rating">Rating</option>
-                <option value="listingName">Property Name</option>
-              </select>
-              <select
-                value={sort.sortOrder || 'desc'}
-                onChange={(e) =>
-                  onSortChange({
-                    ...sort,
-                    sortOrder: e.target.value as 'asc' | 'desc',
-                  })
-                }
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[120px]"
-              >
-                <option value="desc">Descending</option>
-                <option value="asc">Ascending</option>
-              </select>
+          {/* Sorting controls and navigation button - responsive */}
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+              <label className="text-sm font-medium text-gray-700">
+                Sort by:
+              </label>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <select
+                  value={sort.sortBy || 'createdAt'}
+                  onChange={(e) =>
+                    onSortChange({
+                      ...sort,
+                      sortBy: e.target.value as
+                        | 'createdAt'
+                        | 'rating'
+                        | 'listingName',
+                    })
+                  }
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[140px]"
+                >
+                  <option value="createdAt">Date</option>
+                  <option value="rating">Rating</option>
+                  <option value="listingName">Property Name</option>
+                </select>
+                <select
+                  value={sort.sortOrder || 'desc'}
+                  onChange={(e) =>
+                    onSortChange({
+                      ...sort,
+                      sortOrder: e.target.value as 'asc' | 'desc',
+                    })
+                  }
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[120px]"
+                >
+                  <option value="desc">Descending</option>
+                  <option value="asc">Ascending</option>
+                </select>
+              </div>
             </div>
+
+            {/* Navigation button */}
+            {showViewAllButton && (
+              <Link
+                href="/reviews-display"
+                className="px-3 py-1 bg-flexPrimary text-white rounded-lg hover:bg-flexPrimary/90 transition-colors text-sm font-medium"
+              >
+                Visit Reviews Display
+              </Link>
+            )}
           </div>
         </div>
 

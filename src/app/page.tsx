@@ -143,6 +143,7 @@ export default function DashboardPage() {
           pageSize={pagination.pageSize || 10}
           sort={sort}
           isFetching={isFetching}
+          showViewAllButton={true}
           onPageChange={handlePageChange}
           onPageSizeChange={handlePageSizeChange}
           onSortChange={handleSortChange}
