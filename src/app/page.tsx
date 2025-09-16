@@ -1,17 +1,93 @@
 'use client';
 
-import { useReviews, useApproveReview } from '@/hooks/useReviews';
+import { useState, useMemo } from 'react';
+import { useReviews } from '@/hooks/useReviews';
+import { useDebounce } from '@/hooks/useDebounce';
+import type {
+  ReviewFilters,
+  SortOptions,
+  PaginationParams,
+} from '@/hooks/useReviews';
+import DashboardHeader from '@/components/dashboard/Header';
+import KpiGrid from '@/components/dashboard/KpiGrid';
+import TrendChart from '@/components/dashboard/TrendChart';
+import ReviewsTable from '@/components/dashboard/ReviewsTable';
+import FiltersPanel from '@/components/dashboard/FiltersPanel';
 
-export default function Dashboard() {
-  const { data: reviews, isLoading, error } = useReviews();
-  const { mutate: approveReview } = useApproveReview();
+export default function DashboardPage() {
+  const [filters, setFilters] = useState<ReviewFilters>({});
+  const [sort, setSort] = useState<SortOptions>({
+    sortBy: 'createdAt',
+    sortOrder: 'desc',
+  });
+  const [pagination, setPagination] = useState<PaginationParams>({
+    page: 1,
+    pageSize: 10,
+  });
+
+  const debouncedFilters = useDebounce(filters, 300);
+
+  const queryParams = useMemo(
+    () => ({
+      filters: debouncedFilters,
+      pagination,
+      sort,
+    }),
+    [debouncedFilters, pagination, sort],
+  );
+
+  const {
+    data: reviewsResponse,
+    isLoading,
+    error,
+  } = useReviews(queryParams.filters, queryParams.pagination, queryParams.sort);
+  const reviews = reviewsResponse?.data || [];
+
+  const { data: allReviewsResponse } = useReviews(
+    {},
+    { page: 1, pageSize: 1000 },
+    { sortBy: 'createdAt', sortOrder: 'desc' },
+  );
+  const allReviews = allReviewsResponse?.data || [];
+
+  const total = allReviews.length;
+  const avg =
+    total > 0
+      ? (allReviews.reduce((s, r) => s + (r.rating ?? 0), 0) / total).toFixed(2)
+      : 'N/A';
+  const approved = allReviews.filter((r) => r.approved).length;
+  const pending = total - approved;
+
+  const handleFiltersChange = (newFilters: ReviewFilters) => {
+    setFilters(newFilters);
+    setPagination({ ...pagination, page: 1 });
+  };
+
+  const handleSortChange = (newSort: SortOptions) => {
+    setSort(newSort);
+    setPagination({ ...pagination, page: 1 });
+  };
+
+  const handlePageChange = (page: number) => {
+    setPagination({ ...pagination, page });
+  };
+
+  const handlePageSizeChange = (pageSize: number) => {
+    setPagination({ ...pagination, pageSize, page: 1 });
+  };
+
+  const handleReset = () => {
+    setFilters({});
+    setSort({ sortBy: 'createdAt', sortOrder: 'desc' });
+    setPagination({ page: 1, pageSize: 10 });
+  };
 
   if (isLoading) {
     return (
       <div className="min-h-screen bg-flexBg flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-flexPrimary mx-auto mb-4"></div>
-          <p className="text-flexText text-lg">Loading reviews...</p>
+          <p className="text-flexText text-lg">Loading dashboard...</p>
         </div>
       </div>
     );
@@ -22,8 +98,10 @@ export default function Dashboard() {
       <div className="min-h-screen bg-flexBg flex items-center justify-center">
         <div className="text-center">
           <div className="text-red-500 text-6xl mb-4">⚠️</div>
-          <p className="text-flexText text-lg">Error loading reviews</p>
-          <p className="text-gray-500 mt-2">Please try again later</p>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">
+            Error loading dashboard
+          </h2>
+          <p className="text-gray-600">Please try refreshing the page.</p>
         </div>
       </div>
     );
@@ -31,81 +109,36 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-flexBg">
-      <div className="container mx-auto px-4 py-8">
-        <header className="mb-8">
-          <h1 className="text-3xl font-bold text-flexPrimary mb-2">
-            Flex Living Reviews Dashboard
-          </h1>
-          <p className="text-flexText text-lg">
-            Manage and approve guest reviews
-          </p>
-        </header>
+      <main className="container mx-auto px-4 py-8 space-y-8">
+        <DashboardHeader />
 
-        <div className="space-y-6">
-          {reviews?.map((r) => (
-            <div
-              key={r.id}
-              className={`bg-white border border-gray-200 rounded-lg p-6 shadow-sm transition-all duration-200 hover:shadow-md ${
-                r.approved ? 'border-green-200 bg-green-50' : 'border-gray-200'
-              }`}
-            >
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="font-semibold text-lg text-flexPrimary mb-1">
-                    {r.listingName}
-                  </h3>
-                  <div className="flex items-center space-x-4 text-sm text-gray-600">
-                    <span>Source: {r.source}</span>
-                    {r.rating && (
-                      <span className="flex items-center">⭐ {r.rating}/5</span>
-                    )}
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        r.approved
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-yellow-100 text-yellow-800'
-                      }`}
-                    >
-                      {r.approved ? 'Approved' : 'Pending'}
-                    </span>
-                  </div>
-                </div>
-              </div>
+        <FiltersPanel
+          filters={filters}
+          sort={sort}
+          onFiltersChange={handleFiltersChange}
+          onSortChange={handleSortChange}
+          onReset={handleReset}
+        />
 
-              <p className="text-flexText mb-4 leading-relaxed">"{r.text}"</p>
+        <KpiGrid
+          total={total}
+          avg={avg}
+          approved={approved}
+          pending={pending}
+        />
 
-              {r.authorName && (
-                <p className="text-sm text-gray-600 mb-4">— {r.authorName}</p>
-              )}
+        <TrendChart reviews={allReviews} />
 
-              <div className="flex justify-end">
-                <button
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
-                    r.approved
-                      ? 'bg-red-500 hover:bg-red-600 text-white'
-                      : 'bg-flexPrimary hover:bg-flexPrimary/90 text-white'
-                  }`}
-                  onClick={() =>
-                    approveReview({ id: r.id, approved: !r.approved })
-                  }
-                >
-                  {r.approved ? 'Unapprove' : 'Approve'}
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {reviews?.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">📝</div>
-            <p className="text-flexText text-lg">No reviews found</p>
-            <p className="text-gray-500 mt-2">
-              Reviews will appear here once they're loaded
-            </p>
-          </div>
-        )}
-      </div>
+        <ReviewsTable
+          reviews={reviews}
+          currentPage={reviewsResponse?.page || 1}
+          totalPages={reviewsResponse?.totalPages || 1}
+          totalItems={reviewsResponse?.total || 0}
+          pageSize={pagination.pageSize || 10}
+          onPageChange={handlePageChange}
+          onPageSizeChange={handlePageSizeChange}
+        />
+      </main>
     </div>
   );
 }
