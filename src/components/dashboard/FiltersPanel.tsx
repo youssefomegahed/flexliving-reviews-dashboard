@@ -81,6 +81,22 @@ export default function FiltersPanel({
         {/* Expanded filters */}
         {isExpanded && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-100">
+            {/* Property Name */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Property Name
+              </label>
+              <input
+                type="text"
+                placeholder="Search by property name..."
+                value={filters.propertyName || ''}
+                onChange={(e) =>
+                  updateFilter('propertyName', e.target.value || undefined)
+                }
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent"
+              />
+            </div>
+
             {/* Rating Range */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">

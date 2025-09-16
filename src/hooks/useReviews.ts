@@ -4,6 +4,7 @@ import type { Review } from '@/types/review';
 
 export type ReviewFilters = {
   listingId?: string;
+  propertyName?: string;
   approved?: boolean;
   minRating?: number;
   maxRating?: number;
@@ -42,6 +43,8 @@ export function useReviews(
       const params = new URLSearchParams();
 
       if (filters?.listingId) params.append('listingId', filters.listingId);
+      if (filters?.propertyName)
+        params.append('propertyName', filters.propertyName);
       if (filters?.approved !== undefined)
         params.append('approved', String(filters.approved));
       if (filters?.minRating !== undefined)
@@ -85,6 +88,8 @@ export function useAllReviews(filters?: ReviewFilters) {
 
       // Add filters if provided
       if (filters?.listingId) params.append('listingId', filters.listingId);
+      if (filters?.propertyName)
+        params.append('propertyName', filters.propertyName);
       if (filters?.approved !== undefined)
         params.append('approved', String(filters.approved));
       if (filters?.minRating !== undefined)

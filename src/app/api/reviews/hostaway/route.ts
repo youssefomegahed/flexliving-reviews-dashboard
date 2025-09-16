@@ -11,6 +11,7 @@ export async function GET(req: Request) {
   const skip = (page - 1) * pageSize;
 
   const listingId = searchParams.get('listingId') || undefined;
+  const propertyName = searchParams.get('propertyName') || undefined;
   const approvedParam = searchParams.get('approved');
   const status =
     approvedParam === undefined || approvedParam === null
@@ -35,6 +36,7 @@ export async function GET(req: Request) {
 
   interface ReviewWhere {
     listingId?: string;
+    listingName?: { contains: string };
     status?: string;
     rating?: { gte?: number; lte?: number };
     channel?: string;
@@ -44,6 +46,7 @@ export async function GET(req: Request) {
 
   const where: ReviewWhere = {};
   if (listingId) where.listingId = listingId;
+  if (propertyName) where.listingName = { contains: propertyName };
   if (status !== undefined) where.status = status;
 
   if (minRating !== undefined || maxRating !== undefined) {
@@ -93,6 +96,7 @@ export async function GET(req: Request) {
   if (
     total === 0 &&
     !listingId &&
+    !propertyName &&
     !status &&
     !minRating &&
     !maxRating &&
