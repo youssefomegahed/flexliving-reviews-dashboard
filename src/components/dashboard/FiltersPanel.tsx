@@ -20,11 +20,17 @@ export default function FiltersPanel({
 }: FiltersPanelProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const updateFilter = (key: keyof ReviewFilters, value: any) => {
+  const updateFilter = (
+    key: keyof ReviewFilters,
+    value: ReviewFilters[keyof ReviewFilters],
+  ) => {
     onFiltersChange({ ...filters, [key]: value });
   };
 
-  const updateSort = (key: keyof SortOptions, value: any) => {
+  const updateSort = (
+    key: keyof SortOptions,
+    value: SortOptions[keyof SortOptions],
+  ) => {
     onSortChange({ ...sort, [key]: value });
   };
 
@@ -162,6 +168,7 @@ export default function FiltersPanel({
                 <option value="">All Categories</option>
                 <option value="cleanliness">Cleanliness</option>
                 <option value="communication">Communication</option>
+                <option value="respect_house_rules">Respect House Rules</option>
                 <option value="check-in">Check-in</option>
                 <option value="accuracy">Accuracy</option>
                 <option value="location">Location</option>
@@ -201,7 +208,12 @@ export default function FiltersPanel({
           <label className="text-sm font-medium text-gray-700">Sort by:</label>
           <select
             value={sort.sortBy || 'createdAt'}
-            onChange={(e) => updateSort('sortBy', e.target.value)}
+            onChange={(e) =>
+              updateSort(
+                'sortBy',
+                e.target.value as 'createdAt' | 'rating' | 'listingName',
+              )
+            }
             className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent"
           >
             <option value="createdAt">Date</option>
@@ -210,7 +222,9 @@ export default function FiltersPanel({
           </select>
           <select
             value={sort.sortOrder || 'desc'}
-            onChange={(e) => updateSort('sortOrder', e.target.value)}
+            onChange={(e) =>
+              updateSort('sortOrder', e.target.value as 'asc' | 'desc')
+            }
             className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent"
           >
             <option value="desc">Descending</option>
