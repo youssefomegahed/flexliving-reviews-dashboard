@@ -117,7 +117,7 @@ export default function ReviewsTable({
                   </td>
                   <td className="py-4 px-4">
                     <span
-                      className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                      className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-medium ${
                         r.status === 'published'
                           ? 'bg-green-100 text-green-800'
                           : 'bg-yellow-100 text-yellow-800'
@@ -131,19 +131,19 @@ export default function ReviewsTable({
                       onClick={() =>
                         approveMutation.mutate({
                           id: r.id,
-                          approved: !r.approved,
+                          approved: r.status !== 'published',
                         })
                       }
                       disabled={approveMutation.isPending}
                       className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
-                        r.approved
+                        r.status === 'published'
                           ? 'bg-red-500 hover:bg-red-600 text-white'
                           : 'bg-flexPrimary hover:bg-flexPrimary/90 text-white'
                       } disabled:opacity-50 disabled:cursor-not-allowed`}
                     >
                       {approveMutation.isPending
                         ? '...'
-                        : r.approved
+                        : r.status === 'published'
                           ? 'Unapprove'
                           : 'Approve'}
                     </button>
@@ -169,7 +169,7 @@ export default function ReviewsTable({
                   <div className="text-sm text-gray-500">{r.authorName}</div>
                 </div>
                 <span
-                  className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                  className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-medium ${
                     r.status === 'published'
                       ? 'bg-green-100 text-green-800'
                       : 'bg-yellow-100 text-yellow-800'
@@ -194,18 +194,21 @@ export default function ReviewsTable({
 
               <button
                 onClick={() =>
-                  approveMutation.mutate({ id: r.id, approved: !r.approved })
+                  approveMutation.mutate({
+                    id: r.id,
+                    approved: r.status !== 'published',
+                  })
                 }
                 disabled={approveMutation.isPending}
                 className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  r.approved
+                  r.status === 'published'
                     ? 'bg-red-500 hover:bg-red-600 text-white'
                     : 'bg-flexPrimary hover:bg-flexPrimary/90 text-white'
                 } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
                 {approveMutation.isPending
                   ? 'Processing...'
-                  : r.approved
+                  : r.status === 'published'
                     ? 'Unapprove'
                     : 'Approve'}
               </button>

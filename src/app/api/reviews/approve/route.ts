@@ -13,9 +13,11 @@ export async function POST(req: Request) {
       );
     }
 
+    const status = approved ? 'published' : 'unpublished';
+
     const updated = await prisma.review.update({
       where: { id },
-      data: { approved },
+      data: { status },
     });
 
     return NextResponse.json({ success: true, review: updated });

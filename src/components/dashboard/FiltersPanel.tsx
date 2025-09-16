@@ -64,16 +64,6 @@ export default function FiltersPanel({
             All Reviews
           </button>
           <button
-            onClick={() => updateFilter('approved', true)}
-            className={`px-3 py-1 rounded-full text-sm transition-colors ${
-              filters.approved === true
-                ? 'bg-green-500 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            Approved
-          </button>
-          <button
             onClick={() => updateFilter('approved', false)}
             className={`px-3 py-1 rounded-full text-sm transition-colors ${
               filters.approved === false
@@ -82,6 +72,16 @@ export default function FiltersPanel({
             }`}
           >
             Pending
+          </button>
+          <button
+            onClick={() => updateFilter('approved', true)}
+            className={`px-3 py-1 rounded-full text-sm transition-colors ${
+              filters.approved === true
+                ? 'bg-green-500 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            Approved
           </button>
         </div>
 

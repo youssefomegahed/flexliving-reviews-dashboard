@@ -12,8 +12,12 @@ export async function GET(req: Request) {
 
   const listingId = searchParams.get('listingId') || undefined;
   const approvedParam = searchParams.get('approved');
-  const approved =
-    approvedParam === undefined ? undefined : approvedParam === 'true';
+  const status =
+    approvedParam === undefined || approvedParam === null
+      ? undefined
+      : approvedParam === 'true'
+        ? 'published'
+        : 'unpublished';
   const minRating = searchParams.get('minRating')
     ? parseFloat(searchParams.get('minRating')!)
     : undefined;
@@ -31,7 +35,7 @@ export async function GET(req: Request) {
 
   interface ReviewWhere {
     listingId?: string;
-    approved?: boolean;
+    status?: string;
     rating?: { gte?: number; lte?: number };
     channel?: string;
     categories?: { some: { category: string } };
@@ -40,7 +44,7 @@ export async function GET(req: Request) {
 
   const where: ReviewWhere = {};
   if (listingId) where.listingId = listingId;
-  if (approved !== undefined) where.approved = approved;
+  if (status !== undefined) where.status = status;
 
   if (minRating !== undefined || maxRating !== undefined) {
     where.rating = {};
@@ -85,7 +89,18 @@ export async function GET(req: Request) {
     prisma.review.count({ where }),
   ]);
 
-  if (total === 0) {
+  // Only fall back to mock data if there are no filters applied and no real data exists
+  if (
+    total === 0 &&
+    !listingId &&
+    !status &&
+    !minRating &&
+    !maxRating &&
+    !channel &&
+    !category &&
+    !startDate &&
+    !endDate
+  ) {
     const normalized = (Array.isArray(mockData) ? mockData : []).map(
       normalizeHostaway,
     );

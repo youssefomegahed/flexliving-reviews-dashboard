@@ -16,6 +16,5 @@ export type Review = {
   text: string;
   authorName?: string;
   createdAt: string;
-  approved: boolean;
   categoryRatings: CategoryRating[];
 };

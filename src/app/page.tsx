@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useReviews } from '@/hooks/useReviews';
+import { useAllReviews, useReviews } from '@/hooks/useReviews';
 import { useDebounce } from '@/hooks/useDebounce';
 import type {
   ReviewFilters,
@@ -43,20 +43,26 @@ export default function DashboardPage() {
   } = useReviews(queryParams.filters, queryParams.pagination, queryParams.sort);
   const reviews = reviewsResponse?.data || [];
 
-  const { data: allReviewsResponse } = useReviews(
-    {},
-    { page: 1, pageSize: 1000 },
-    { sortBy: 'createdAt', sortOrder: 'desc' },
-  );
+  // Get filtered data for the table, chart, and KPIs
+  const { data: allReviewsResponse } = useAllReviews(debouncedFilters);
   const allReviews = allReviewsResponse?.data || [];
 
+  // KPIs and chart should show filtered data
   const total = allReviews.length;
   const avg =
     total > 0
       ? (allReviews.reduce((s, r) => s + (r.rating ?? 0), 0) / total).toFixed(2)
       : 'N/A';
-  const approved = allReviews.filter((r) => r.approved).length;
-  const pending = total - approved;
+  const approved = allReviews.filter((r) => r.status === 'published').length;
+  const pending = allReviews.filter((r) => r.status === 'unpublished').length;
+
+  // Determine current filter state for KPI display
+  const currentFilter =
+    filters.approved === true
+      ? 'approved'
+      : filters.approved === false
+        ? 'pending'
+        : 'all';
 
   const handleFiltersChange = (newFilters: ReviewFilters) => {
     setFilters(newFilters);
@@ -125,6 +131,7 @@ export default function DashboardPage() {
           avg={avg}
           approved={approved}
           pending={pending}
+          currentFilter={currentFilter}
         />
 
         <TrendChart reviews={allReviews} />

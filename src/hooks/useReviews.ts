@@ -77,6 +77,42 @@ export function useReviews(
   });
 }
 
+export function useAllReviews(filters?: ReviewFilters) {
+  return useQuery({
+    queryKey: ['all-reviews', filters],
+    queryFn: async (): Promise<ReviewsResponse> => {
+      const params = new URLSearchParams();
+
+      // Add filters if provided
+      if (filters?.listingId) params.append('listingId', filters.listingId);
+      if (filters?.approved !== undefined)
+        params.append('approved', String(filters.approved));
+      if (filters?.minRating !== undefined)
+        params.append('minRating', String(filters.minRating));
+      if (filters?.maxRating !== undefined)
+        params.append('maxRating', String(filters.maxRating));
+      if (filters?.channel) params.append('channel', filters.channel);
+      if (filters?.category) params.append('category', filters.category);
+      if (filters?.startDate) params.append('startDate', filters.startDate);
+      if (filters?.endDate) params.append('endDate', filters.endDate);
+
+      // Always fetch all results (no pagination)
+      params.append('page', '1');
+      params.append('pageSize', '1000');
+
+      const url = `/api/reviews/hostaway?${params.toString()}`;
+      const response = await apiFetch<ReviewsResponse>(url);
+
+      const totalPages = Math.ceil(response.total / response.pageSize);
+
+      return {
+        ...response,
+        totalPages,
+      };
+    },
+  });
+}
+
 export function useApproveReview() {
   const qc = useQueryClient();
   return useMutation({
@@ -90,7 +126,12 @@ export function useApproveReview() {
       );
     },
     onSuccess: () => {
+      // Invalidate all review-related queries to ensure UI syncs
       qc.invalidateQueries({ queryKey: ['reviews'] });
+      qc.invalidateQueries({ queryKey: ['all-reviews'] });
+      // Also refetch immediately to avoid stale data
+      qc.refetchQueries({ queryKey: ['reviews'] });
+      qc.refetchQueries({ queryKey: ['all-reviews'] });
     },
   });
 }

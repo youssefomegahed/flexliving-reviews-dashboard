@@ -3,10 +3,17 @@ type KpiProps = {
   avg: string;
   approved: number;
   pending: number;
+  currentFilter?: 'approved' | 'pending' | 'all';
 };
 
-export default function KpiGrid({ total, avg, approved, pending }: KpiProps) {
-  const kpis = [
+export default function KpiGrid({
+  total,
+  avg,
+  approved,
+  pending,
+  currentFilter,
+}: KpiProps) {
+  const allKpis = [
     {
       label: 'Total Reviews',
       value: total,
@@ -41,8 +48,26 @@ export default function KpiGrid({ total, avg, approved, pending }: KpiProps) {
     },
   ];
 
+  // Filter out redundant KPI cards based on current filter
+  const kpis = allKpis.filter((kpi) => {
+    if (
+      (currentFilter === 'approved' || currentFilter === 'pending') &&
+      (kpi.label === 'Approved' || kpi.label === 'Pending')
+    )
+      return false;
+    return true;
+  });
+
+  // Dynamic grid layout based on number of visible cards
+  const gridCols =
+    kpis.length === 2
+      ? 'grid-cols-2'
+      : kpis.length === 3
+        ? 'grid-cols-2 lg:grid-cols-3'
+        : 'grid-cols-2 lg:grid-cols-4';
+
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    <section className={`grid ${gridCols} gap-4 mb-8`}>
       {kpis.map((kpi) => (
         <div
           key={kpi.label}

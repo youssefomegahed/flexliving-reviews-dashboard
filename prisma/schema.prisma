@@ -17,16 +17,15 @@ model Review {
   listingName    String?
   channel        String?  // airbnb | booking | etc.
   reviewType     String?  // guest-to-host | host-to-guest
-  status         String   // published | pending | hidden
+  status         String   // published | unpublished | pending | hidden
   rating         Float?   // 1–5 scale
   text           String
   authorName     String?
   createdAt      DateTime
-  approved       Boolean  @default(false)
   categories     ReviewCategory[]
   
   @@index([listingId])
-  @@index([approved])
+  @@index([status])
   @@index([source, sourceReviewId])
 }
 
