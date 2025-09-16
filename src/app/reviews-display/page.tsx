@@ -70,14 +70,11 @@ export default function ReviewsDisplayPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <div className="bg-white border-b border-flexPrimary/20">
+      <div className="bg-flexPrimary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-              <Link
-                href="/"
-                className="hover:text-flexPrimary transition-colors"
-              >
+            <nav className="flex items-center space-x-2 text-sm text-white/80 mb-4">
+              <Link href="/" className="hover:text-white transition-colors">
                 Dashboard
               </Link>
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -87,24 +84,22 @@ export default function ReviewsDisplayPage() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-flexPrimary font-medium">
-                Approved Reviews
-              </span>
+              <span className="text-white font-medium">Approved Reviews</span>
             </nav>
 
             {/* Page Title */}
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-3xl font-bold text-flexPrimary">
+                <h1 className="text-3xl font-bold text-white">
                   Approved Reviews
                 </h1>
-                <p className="mt-2 text-lg text-gray-600">
+                <p className="mt-2 text-lg text-white/90">
                   Browse through all approved guest reviews
                 </p>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="bg-flexPrimary/10 px-3 py-1 rounded-full">
-                  <span className="text-sm font-medium text-flexPrimary">
+                <div className="bg-white/20 px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-white">
                     {reviewsResponse?.total || 0} reviews
                   </span>
                 </div>
