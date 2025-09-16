@@ -50,13 +50,20 @@ export default function ReviewsTable({
   return (
     <section className="bg-white rounded-xl shadow-sm border border-gray-100">
       <div className="p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-semibold text-flexPrimary">Reviews</h2>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <label className="text-sm font-medium text-gray-700">
-                Sort by:
-              </label>
+        <div className="mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <h2 className="text-xl font-semibold text-flexPrimary">Reviews</h2>
+            <div className="text-sm text-gray-600">
+              {totalItems} total reviews
+            </div>
+          </div>
+
+          {/* Sorting controls - responsive */}
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <label className="text-sm font-medium text-gray-700">
+              Sort by:
+            </label>
+            <div className="flex flex-col sm:flex-row gap-2">
               <select
                 value={sort.sortBy || 'createdAt'}
                 onChange={(e) =>
@@ -68,7 +75,7 @@ export default function ReviewsTable({
                       | 'listingName',
                   })
                 }
-                className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm"
+                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[140px]"
               >
                 <option value="createdAt">Date</option>
                 <option value="rating">Rating</option>
@@ -82,14 +89,11 @@ export default function ReviewsTable({
                     sortOrder: e.target.value as 'asc' | 'desc',
                   })
                 }
-                className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm"
+                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-transparent text-sm min-w-0 sm:min-w-[120px]"
               >
                 <option value="desc">Descending</option>
                 <option value="asc">Ascending</option>
               </select>
-            </div>
-            <div className="text-sm text-gray-600">
-              {totalItems} total reviews
             </div>
           </div>
         </div>
