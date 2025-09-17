@@ -43,7 +43,6 @@ A modern web application for managing and analyzing guest reviews across Flex Li
    DATABASE_URL="file:./dev.db"
    ```
 
-
 4. Set up the database:
 
    ```bash
