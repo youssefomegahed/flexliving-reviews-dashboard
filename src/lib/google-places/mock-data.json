@@ -1,0 +1,164 @@
+[
+  {
+    "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+    "name": "Flex Living - Modern Apartments",
+    "rating": 4.7,
+    "user_ratings_total": 156,
+    "reviews": [
+      {
+        "author_name": "Sarah Johnson",
+        "author_url": "https://www.google.com/maps/contrib/123456789",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Absolutely fantastic stay! The apartment was spotless, modern, and had everything we needed. The location was perfect - close to all the main attractions. The host was incredibly responsive and helpful. Would definitely stay here again!",
+        "time": 1704067200
+      },
+      {
+        "author_name": "Michael Chen",
+        "author_url": "https://www.google.com/maps/contrib/987654321",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 4,
+        "relative_time_description": "3 months ago",
+        "text": "Great location and the apartment was very clean. The check-in process was smooth. Only minor issue was the WiFi was a bit slow in the evening, but overall a good experience.",
+        "time": 1701388800
+      },
+      {
+        "author_name": "Emma Rodriguez",
+        "author_url": "https://www.google.com/maps/contrib/456789123",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "Perfect apartment for our family vacation! Spacious, well-equipped kitchen, and the kids loved the balcony. The building has great amenities and the staff were very friendly. Highly recommend!",
+        "time": 1698710400
+      }
+    ]
+  },
+  {
+    "place_id": "ChIJd8BlQ2BZwokRAFQEcDlJRAI",
+    "name": "Flex Living - Downtown Suites",
+    "rating": 4.5,
+    "user_ratings_total": 89,
+    "reviews": [
+      {
+        "author_name": "David Thompson",
+        "author_url": "https://www.google.com/maps/contrib/789123456",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 4,
+        "relative_time_description": "1 month ago",
+        "text": "Nice apartment in a great downtown location. The building is modern and the apartment was clean. The only downside was some noise from the street, but that's expected in downtown. Good value for money.",
+        "time": 1706745600
+      },
+      {
+        "author_name": "Lisa Wang",
+        "author_url": "https://www.google.com/maps/contrib/321654987",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Excellent stay! The apartment was exactly as described. Very clean, modern amenities, and the location couldn't be better. Walking distance to restaurants, shops, and public transport. The host was very accommodating.",
+        "time": 1704067200
+      },
+      {
+        "author_name": "James Wilson",
+        "author_url": "https://www.google.com/maps/contrib/654987321",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 3,
+        "relative_time_description": "3 months ago",
+        "text": "The apartment was okay, but had some issues. The heating didn't work properly and there was a leak in the bathroom. The location was good though, and the host tried to help with the issues.",
+        "time": 1701388800
+      }
+    ]
+  },
+  {
+    "place_id": "ChIJAVkDPzdZwokRcYbDnwD3N3Y",
+    "name": "Flex Living - Waterfront Residences",
+    "rating": 4.8,
+    "user_ratings_total": 203,
+    "reviews": [
+      {
+        "author_name": "Anna Kowalski",
+        "author_url": "https://www.google.com/maps/contrib/147258369",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 5,
+        "relative_time_description": "1 week ago",
+        "text": "Stunning waterfront views! The apartment was immaculate and beautifully decorated. The kitchen was fully equipped and the living space was perfect for our group. The sunset views from the balcony were incredible. Will definitely be back!",
+        "time": 1709424000
+      },
+      {
+        "author_name": "Robert Martinez",
+        "author_url": "https://www.google.com/maps/contrib/369258147",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 4,
+        "relative_time_description": "1 month ago",
+        "text": "Great location with amazing water views. The apartment was clean and comfortable. The building has nice amenities including a gym and pool. Only minor issue was the parking situation, but overall a great stay.",
+        "time": 1706745600
+      },
+      {
+        "author_name": "Jennifer Lee",
+        "author_url": "https://www.google.com/maps/contrib/258147369",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Absolutely perfect! The apartment exceeded our expectations. The waterfront location was breathtaking, and the apartment was spotless and modern. The host was very responsive and helpful. This is definitely our go-to place when visiting the city.",
+        "time": 1704067200
+      },
+      {
+        "author_name": "Mark Anderson",
+        "author_url": "https://www.google.com/maps/contrib/741852963",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 4,
+        "relative_time_description": "3 months ago",
+        "text": "Beautiful apartment with great views. The location is perfect for exploring the city. The apartment was clean and well-maintained. The only small issue was that the WiFi was occasionally slow, but it didn't affect our stay much.",
+        "time": 1701388800
+      }
+    ]
+  },
+  {
+    "place_id": "ChIJ7cv00DgZwokRcYbDnwD3N3Y",
+    "name": "Flex Living - Garden District",
+    "rating": 4.3,
+    "user_ratings_total": 67,
+    "reviews": [
+      {
+        "author_name": "Patricia Brown",
+        "author_url": "https://www.google.com/maps/contrib/963852741",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 4,
+        "relative_time_description": "2 weeks ago",
+        "text": "Lovely apartment in a quiet neighborhood. The garden area is beautiful and the apartment was very clean. The kitchen was well-equipped and the living space was comfortable. Great for a relaxing stay.",
+        "time": 1708819200
+      },
+      {
+        "author_name": "Thomas Garcia",
+        "author_url": "https://www.google.com/maps/contrib/852963741",
+        "language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/default-user",
+        "rating": 3,
+        "relative_time_description": "1 month ago",
+        "text": "The apartment was decent but had some maintenance issues. The air conditioning wasn't working properly and there were some plumbing problems. The location was nice and quiet though. The host was responsive to our concerns.",
+        "time": 1706745600
+      },
+      {
+        "author_name": "Maria Gonzalez",
+        "author_url": "https://www.google.com/maps/contrib/741963852",
+        "language": "en",
+        "profile_photo_url": "https://www.google.com/maps/contrib/741963852",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Perfect apartment for our family! The garden district location was peaceful and the apartment was spacious and clean. The kids loved the garden area. The host was very accommodating and helpful. Highly recommend!",
+        "time": 1704067200
+      }
+    ]
+  }
+]

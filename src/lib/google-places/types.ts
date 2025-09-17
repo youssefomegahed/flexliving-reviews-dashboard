@@ -1,0 +1,29 @@
+export interface GooglePlace {
+  place_id: string;
+  name: string;
+  rating: number;
+  user_ratings_total: number;
+  reviews: GoogleReview[];
+}
+
+export interface GoogleReview {
+  author_name: string;
+  author_url: string;
+  language: string;
+  profile_photo_url: string;
+  rating: number;
+  relative_time_description: string;
+  text: string;
+  time: number;
+}
+
+export interface GooglePlacesApiResponse {
+  result: GooglePlace;
+  status: string;
+}
+
+export interface GooglePlacesError {
+  error_message: string;
+  status: string;
+}
+
