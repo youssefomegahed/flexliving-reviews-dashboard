@@ -41,6 +41,10 @@ A modern web application for managing and analyzing guest reviews across Flex Li
 
    ```env
    DATABASE_URL="file:./dev.db"
+   HOSTAWAY_ACCOUNT_ID=your_account_id
+   HOSTAWAY_API_KEY=your_api_key
+   HOSTAWAY_ACCESS_TOKEN=your_access_token
+   GOOGLE_PLACES_API_KEY=your_google_places_api_key
    ```
 
 4. Set up the database:
@@ -113,9 +117,36 @@ The application uses a SQLite database with the following main models:
 - `yarn prisma db seed` - Seed database with sample data
 - `yarn prisma studio` - Open Prisma Studio for database management
 
-## Hostaway API Integration
+## API Integrations
 
-The application includes mock integration with the Hostaway API for future real-time data synchronization. The integration attempts to fetch reviews from the Hostaway API using OAuth2 authentication.
+The application includes mock integrations with multiple review sources:
+
+### Hostaway API Integration
+
+Mock integration with the Hostaway API for future real-time data synchronization. The integration attempts to fetch reviews from the Hostaway API using OAuth2 authentication.
+
+### Google Places API Integration (Exploration Complete)
+
+**Status: PARKED - Ready for Production Integration**
+
+Complete exploration and implementation of Google Places API integration for Google Reviews. The integration is fully implemented but parked in a dedicated module to demonstrate the exploration work.
+
+**What's Implemented:**
+
+- Complete data normalization system (`src/lib/google-places/`)
+- Mock Google Places data with realistic review structure
+- Smart category rating generation based on review content analysis
+- Demo endpoint at `/api/demo/google-places` to showcase capabilities
+- Full TypeScript type definitions and error handling
+
+**Integration Features:**
+
+- 13 mock Google reviews across 4 Flex Living properties
+- Intelligent keyword-based category rating generation
+- Proper data structure mapping from Google Places to application schema
+- Production-ready architecture with comprehensive documentation
+
+**To Activate:** Add `GOOGLE_PLACES_API_KEY` to environment variables and import the module in the main API route.
 
 ## Styling
 
