@@ -25,4 +25,3 @@ export type { GooglePlace, GoogleReview } from './types';
 
 // Re-export for convenience
 export * from './normalize';
-

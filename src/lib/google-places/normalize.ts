@@ -1,5 +1,5 @@
 import type { Review } from '@/types/review';
-import type { GooglePlace, GoogleReview } from './types';
+import type { GooglePlace } from './types';
 
 export function normalizeGooglePlaces(place: GooglePlace): Review[] {
   if (!place.reviews || !Array.isArray(place.reviews)) {

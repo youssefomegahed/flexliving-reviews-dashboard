@@ -14,14 +14,32 @@ export type NormalizedReview = {
   createdAt: string;
 };
 
+type HostawayReviewCategory = {
+  category: string;
+  rating: number;
+};
+
+type HostawayRawReview = {
+  id: number;
+  type?: string;
+  status?: string;
+  rating?: number;
+  publicReview?: string;
+  reviewCategory?: HostawayReviewCategory[];
+  submittedAt: string;
+  guestName?: string;
+  listingName?: string;
+  channel?: string;
+};
+
 function to5Scale(n: number | null | undefined) {
   if (n == null) return null;
   return Math.round((n / 2) * 10) / 10; // convert 0–10 → 0–5, keep one decimal
 }
 
-export function normalizeHostaway(raw: any): NormalizedReview {
+export function normalizeHostaway(raw: HostawayRawReview): NormalizedReview {
   const categories =
-    raw.reviewCategory?.map((c: any) => ({
+    raw.reviewCategory?.map((c: HostawayReviewCategory) => ({
       category: c.category,
       rating: to5Scale(c.rating) ?? 0,
     })) ?? [];
@@ -31,7 +49,11 @@ export function normalizeHostaway(raw: any): NormalizedReview {
       ? to5Scale(raw.rating)
       : categories.length
         ? Math.round(
-            (categories.reduce((a: number, b: any) => a + b.rating, 0) /
+            (categories.reduce(
+              (a: number, b: { category: string; rating: number }) =>
+                a + b.rating,
+              0,
+            ) /
               categories.length) *
               10,
           ) / 10
@@ -46,7 +68,7 @@ export function normalizeHostaway(raw: any): NormalizedReview {
       : 'unknown',
     listingName: raw.listingName,
     channel: raw.channel ?? 'unknown',
-    reviewType: raw.type ?? null,
+    reviewType: raw.type ?? undefined,
     status: raw.status ?? 'published',
     rating: avg,
     categoryRatings: categories,

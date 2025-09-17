@@ -32,7 +32,7 @@ This module contains a mock implementation for integrating with Google Places AP
 
 ## File Structure
 
-```
+```text
 src/lib/google-places/
 ├── README.md              # This documentation
 ├── index.ts              # Main module exports

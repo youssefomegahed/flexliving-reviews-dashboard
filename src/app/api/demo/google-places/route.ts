@@ -2,12 +2,9 @@ import { NextResponse } from 'next/server';
 import {
   normalizeAllGooglePlaces,
   mockGooglePlacesData,
-  type GooglePlace,
 } from '@/lib/google-places';
 
-export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url);
-
+export async function GET() {
   try {
     // Simulate Google Places API call
     const googleApiKey = process.env.GOOGLE_PLACES_API_KEY;
@@ -58,4 +55,3 @@ export async function GET(req: Request) {
     );
   }
 }
-
