@@ -11,7 +11,7 @@ datasource db {
 model Review {
   /// Unique ID combining source and sourceReviewId (e.g. `hostaway:7453`)
   id             String   @id
-  source         String   // "hostaway" | "google"
+  source         String   // "hostaway" | "google" | other sources
   sourceReviewId String   // Original review ID from the source
   listingId      String
   listingName    String?
