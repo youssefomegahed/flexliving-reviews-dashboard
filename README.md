@@ -15,7 +15,7 @@ A modern web application for managing and analyzing guest reviews across Flex Li
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **Styling**: Tailwind CSS v4 with custom theme
-- **Database**: SQLite with Prisma ORM
+- **Database**: SQLite (local) / PostgreSQL (production) with Prisma ORM
 - **State Management**: TanStack Query (React Query)
 - **Charts**: Recharts
 
@@ -40,7 +40,10 @@ A modern web application for managing and analyzing guest reviews across Flex Li
    Create a `.env` file with:
 
    ```env
+   # Local development - SQLite database
    DATABASE_URL="file:./dev.db"
+
+   # API Keys (optional for local development)
    HOSTAWAY_ACCOUNT_ID=your_account_id
    HOSTAWAY_API_KEY=your_api_key
    HOSTAWAY_ACCESS_TOKEN=your_access_token
@@ -61,6 +64,41 @@ A modern web application for managing and analyzing guest reviews across Flex Li
    ```
 
 The application will be available at `http://localhost:3000`.
+
+## Database Configuration
+
+### Local Development
+
+For local development, the application uses SQLite with a file-based database:
+
+```env
+DATABASE_URL="file:./dev.db"
+```
+
+This creates a local `dev.db` file in your project root for development and testing.
+
+### Production Deployment
+
+The production version uses PostgreSQL hosted on Neon for better performance and reliability:
+
+```env
+DATABASE_URL="postgresql://username:password@hostname:port/database"
+```
+
+The application automatically handles the database differences through Prisma's database abstraction layer.
+
+### Deployment Setup
+
+When deploying to production (e.g., Vercel), ensure you have:
+
+1. **PostgreSQL Database**: Set up a Neon PostgreSQL database
+2. **Environment Variables**: Configure the following in your deployment platform:
+   ```env
+   DATABASE_URL="postgresql://username:password@hostname:port/database"
+   HOSTAWAY_ACCESS_TOKEN=your_production_token
+   GOOGLE_PLACES_API_KEY=your_production_key
+   ```
+3. **Database Migration**: The build process automatically runs `prisma db push` to set up the schema
 
 ## Project Structure
 
@@ -86,7 +124,7 @@ src/
 
 ## Database Schema
 
-The application uses a SQLite database with the following main models:
+The application uses a unified database schema that works with both SQLite (local) and PostgreSQL (production) with the following main models:
 
 - **Review**: Stores review data including text, rating, status, and metadata
 - **ReviewCategory**: Stores category-specific ratings for each review
