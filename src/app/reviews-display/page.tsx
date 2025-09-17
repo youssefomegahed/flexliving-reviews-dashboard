@@ -152,8 +152,8 @@ export default function ReviewsDisplayPage() {
                 }
                 className="px-3 py-2 border border-flexPrimary/30 rounded-lg focus:ring-2 focus:ring-flexPrimary focus:border-flexPrimary text-sm bg-white"
               >
-                <option value="desc">Newest First</option>
-                <option value="asc">Oldest First</option>
+                <option value="desc">Descending</option>
+                <option value="asc">Ascending</option>
               </select>
             </div>
           </div>
