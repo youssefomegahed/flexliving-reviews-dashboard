@@ -43,11 +43,6 @@ A modern web application for managing and analyzing guest reviews across Flex Li
    DATABASE_URL="file:./dev.db"
    ```
 
-   Create a `.env.local` file with:
-
-   ```env
-   hostaway_access_token=your_access_token
-   ```
 
 4. Set up the database:
 
