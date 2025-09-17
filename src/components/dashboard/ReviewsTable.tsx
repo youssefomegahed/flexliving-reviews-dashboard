@@ -262,14 +262,14 @@ export default function ReviewsTable({
                     approved: r.status !== 'published',
                   })
                 }
-                disabled={approveMutation.isPending}
+                disabled={approveMutation.isPending || isFetching}
                 className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   r.status === 'published'
                     ? 'bg-red-500 hover:bg-red-600 text-white'
                     : 'bg-flexPrimary hover:bg-flexPrimary/90 text-white'
                 } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                {approveMutation.isPending
+                {approveMutation.isPending || isFetching
                   ? 'Processing...'
                   : r.status === 'published'
                     ? 'Unapprove'
